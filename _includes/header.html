@@ -1,57 +1,96 @@
-<!doctype html>
-<head>
+<!-- TODO this file has become a mess, refactor it -->
 
-  <!-- Meta -->
-  <meta charset="utf-8">
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% elsif post.title %}{{ post.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.description }}{% endif %}</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="yes" name="apple-mobile-web-app-capable">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+{% if page.cover-img or page.title %}
 
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.url }}/feed.xml">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.url }}/atom.xml">
+{% if page.cover-img %}
+  <div id="header-big-imgs" data-num-img={% if page.cover-img.first %}{{ page.cover-img.size }}{% else %}1{% endif %}
+    {% for bigimg in page.cover-img %}
+    {% assign imgnum = forloop.index %}
+    {% for imginfo in bigimg %}
+      {% if imginfo[0] %}
+      data-img-src-{{ imgnum }}="{{ imginfo[0] | absolute_url }}"
+      data-img-desc-{{ imgnum }}="{{ imginfo[1] }}"
+    {% else %}
+      data-img-src-{{ imgnum }}="{{ imginfo | absolute_url }}"
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+  ></div>
+{% endif %}
 
-  <!-- Favicons -->
-  <link rel="icon" href="{{ site.url }}/img/favicon.png">
+<header class="header-section {% if page.cover-img %}has-img{% endif %}">
+{% if page.cover-img %}
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="{{ include.type }}-heading">
+          <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
+          {% if page.subtitle %}
+            {% if include.type == "page" %}
+              <hr class="small">
+              <span class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</span>
+            {% else %}
+              <h2 class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</h2>
+            {% endif %}
+          {% endif %}
 
-  <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700|Merriweather:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="{{ "/css/animate.min.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
-
-</head>
-<body class="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}{% if page.category %} category-{{ page.category }}{% endif %}{% if page.layout-class %} layout-{{ page.layout-class }}{% endif %}">
-
-<div class="main container" id="top">
-
-  {% if site.enable_nav == true %}
-  <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/">{{ site.admin_name }}</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              {% for item in site.nav_item %}
-                <li>
-                  <a href="{{ item.url }}">{{ item.text }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
+          {% if include.type == "post" %}
+            <span class="post-meta">Posted on {{ page.date | date: date_format }}</span>
+            {% if page.last-updated %}
+              <span class="post-meta">
+                <span class="d-none d-md-inline middot">&middot;</span>
+                Last updated {{ page.last-updated | date: date_format }}
+              </span>
+            {% endif %}
+            {% if page.readtime %}
+              {% include readtime.html %}
+            {% endif %}
+          {% endif %}
+        </div>
       </div>
-  </nav>
-  {% endif %}
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+{% endif %}
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="{{ include.type }}-heading">
+          <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
+          {% if page.subtitle %}
+            {% if include.type == "page" %}
+              <hr class="small">
+              <span class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</span>
+            {% else %}
+              <h2 class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</h2>
+            {% endif %}
+          {% endif %}
+
+          {% if include.type == "post" %}
+            <span class="post-meta">Posted on {{ page.date | date: date_format }}</span>
+            {% if page.last-updated %}
+              <span class="post-meta">
+                <span class="d-none d-md-inline middot">&middot;</span>
+                Last updated {{ page.last-updated | date: date_format }}
+              </span>
+            {% endif %}
+            {% if page.readtime %}
+              {% include readtime.html %}
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+{% else %}
+<div class="intro-header"></div>
+{% endif %}
