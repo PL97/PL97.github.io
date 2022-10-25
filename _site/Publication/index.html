@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Le's Hub</title>
+
+  
+  <meta name="author" content="Le Peng">
+  
+
+  <meta name="description" content="Foundations of Computer Vision &amp; Machine Learning Imbalance Classification using Regrouping Le Peng, Yash Travadi , Ju Sun. Accepted to &amp;ldquo;NeurIPS’22 Workshop: When Medical Imaging Meets NeurIPS&amp;rdquo; (MedNeurIPS) 2022 Rethink Transfer Learning in Medical Imaging Le Peng, Hengyue Liang, Taihui Li, Ju Sun. Submitted to &amp;ldquo;EEE Transactions on Medical Imaging&amp;rdquo;...">
+
+  
+
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Le's Hub" href="http://localhost:4003/feed.xml">
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Le's Hub">
+  <meta property="og:title" content="Le's Hub">
+  <meta property="og:description" content="Foundations of Computer Vision &amp; Machine Learning Imbalance Classification using Regrouping Le Peng, Yash Travadi , Ju Sun. Accepted to &amp;ldquo;NeurIPS’22 Workshop: When Medical Imaging Meets NeurIPS&amp;rdquo; (MedNeurIPS) 2022 Rethink Transfer Learning in Medical Imaging Le Peng, Hengyue Liang, Taihui Li, Ju Sun. Submitted to &amp;ldquo;EEE Transactions on Medical Imaging&amp;rdquo;...">
+
+  
+  <meta property="og:image" content="http://localhost:4003/assets/img/lepeng.png">
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4003/Publication/">
+  <link rel="canonical" href="http://localhost:4003/Publication/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Le's Hub">
+  <meta property="twitter:description" content="Foundations of Computer Vision &amp; Machine Learning Imbalance Classification using Regrouping Le Peng, Yash Travadi , Ju Sun. Accepted to &amp;ldquo;NeurIPS’22 Workshop: When Medical Imaging Meets NeurIPS&amp;rdquo; (MedNeurIPS) 2022 Rethink Transfer Learning in Medical Imaging Le Peng, Hengyue Liang, Taihui Li, Ju Sun. Submitted to &amp;ldquo;EEE Transactions on Medical Imaging&amp;rdquo;...">
+
+  
+  <meta name="twitter:image" content="http://localhost:4003/assets/img/lepeng.png">
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4003/">Le's Hub</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/Publication">Publications</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+       \
+        { \
+          "title"    : "", \
+          "category" : "page", \
+          "url"      : "/Publication/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+<div class="intro-header"></div>
+
+
+
+<div class=" container-md " role="main">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      <!-- <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/> -->
+<h2>Foundations of Computer Vision & Machine Learning</h2>
+
+
+<div style='vertical-align:middle; display:inline;'>
+    <a href="https://arxiv.org/abs/2210.12234" target=&ldquo;blank&rdquo;>Imbalance Classification using Regrouping</a> <br/>
+    <b>Le Peng</b>, Yash Travadi , Ju Sun. <br />
+    Accepted to &ldquo;NeurIPS’22 Workshop: When Medical Imaging Meets NeurIPS&rdquo; (MedNeurIPS) 2022</p>
+</div>
+
+<div style='vertical-align:middle; display:inline;'>
+    <a href="https://arxiv.org/abs/2106.05152" target=&ldquo;blank&rdquo;>Rethink Transfer Learning in Medical Imaging</a> <br/>
+    <b>Le Peng</b>, Hengyue Liang, Taihui Li, Ju Sun. <br />
+    Submitted to &ldquo;EEE Transactions on Medical Imaging&rdquo; (IEEE TMI) 2022</p>
+</div>
+
+<div style='vertical-align:middle; display:inline;'>
+    <a href="https://arxiv.org/abs/2110.12271" target=&ldquo;blank&rdquo;>Early Stopping beyond Supervised Learning: Self-Validation</a> <br/>
+    Taihui Li, Zhong Zhuang, Hengyue Liang, <b>Le Peng</b>, Hengkang Wang, Ju Sun. <br />
+    Accepted to &ldquo;British Machine Vision Conference &rdquo; (BMVC) 2021</p>
+</div>
+
+
+<h2>AI Models and System for Healthcare</h2>
+
+<div style='vertical-align:middle; display:inline;'>
+    <a href="https://www.google.com/url?q=https%3A%2F%2Facademic.oup.com%2Fjamia%2Fadvance-article%2Fdoi%2F10.1093%2Fjamia%2Focac188%2F6754819&sa=D&sntz=1&usg=AOvVaw1PjuXfJBQvU0Op34VzK7aG" target=&ldquo;blank&rdquo;>
+        Evaluation of federated learning variations for COVID-19 diagnosis using chest radiographs from 42 US and European hospitals</a> <br/>
+        <b>Le Peng</b>, Gaoxiang Luo, Andrew Walker, Zachary Zaiman, Emma K Jones, Hemant Gupta, Kristopher Kersten, John L Burns, Christopher A Harle, Tanja Magoc, Benjamin Shickel, Scott D Steenburg, Tyler Loftus, Genevieve B Melton, Judy Wawira Gichoya, Ju Sun, Christopher J Tignanelli.  <br />
+    Accepted to &ldquo;ournal of the American Medical Informatics Association &rdquo; (JAMIA) 2022</p>
+</div>
+
+<div style='vertical-align:middle; display:inline;'>
+    <a href="https://www.medrxiv.org/content/10.1101/2021.06.04.21258316v1" target=&ldquo;blank&rdquo;>
+        A Prospective Observational Study to Investigate Performance of a Chest X-ray Artificial Intelligence Diagnostic Support Tool Across 12 U.S. Hospitals</a> <br/>
+        Ju Sun, <b>Le Peng</b>, Taihui Li, Dyah Adila, Zach Zaiman, Genevieve Melton, Nicholas E Ingraham, Eric Murray, Daniel Boley, Sean Switzer, John L Burns, Kun Huang, Tadashi Allen, Scott D Steenburg, Judy Wawira Gichoya, Erich Kummerfeld, Christopher J Tignanelli.  <br />
+    Accepted to &ldquo;Radiology: Artificial Intelligence &rdquo; (Radiology AI) 2021</p>
+</div>
+
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="https://github.com/PL97" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/le-peng-98668b204" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/scholar.google.com/citations?user=K0BZOpsAAAAJ&hl=en&oi=ao" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Le Peng
+        &nbsp;&bull;&nbsp;
+      
+      2022
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4003/">MyWebsite.com</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
