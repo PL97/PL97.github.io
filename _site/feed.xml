@@ -15,7 +15,7 @@
         <title>Tools: NER_metric, a light-weight evaluation tool for NER</title>
         <description>
           
-          NER_eval A simple implementation of strict/lenient matching to evaluate NER performance (precision, recall, F1-score) in 60 lines! This script currently only supports the IOB2 format with both strict and lenient modes. Installation pip install ner_metrics Usage from ner_metrics import classication_report y_true = [['B-PER', 'I-PER', 'O', 'B-ORG', 'B-ORG', 'O', 'O', 'B-PER',...
+          Source: GitHub NER_eval A simple implementation of strict/lenient matching to evaluate NER performance (precision, recall, F1-score) in 60 lines! This script currently only supports the IOB2 format with both strict and lenient modes. Installation pip install ner_metrics Usage from ner_metrics import classication_report y_true = [['B-PER', 'I-PER', 'O', 'B-ORG', 'B-ORG', 'O',...
         </description>
         <pubDate>Sat, 11 Mar 2023 00:00:00 -0500</pubDate>
         <link>http://localhost:4003/2023-03-11-ner-metrics/</link>
@@ -26,7 +26,7 @@
         <title>Brat2BIO, A simple script that convert Brat format to BIO format</title>
         <description>
           
-          Brat2BIO A simple script that convert Brat format to BIO format Conversion code adapted from GithubGist by thatguysimon What this git repo for? This scripts provide a simple tools to convert Brat Standoff format to BIO format. what’s different: support multiple span of text from a single entity save to...
+          Source: GitHub Brat2BIO A simple script that convert Brat format to BIO format Conversion code adapted from GithubGist by thatguysimon What this git repo for? This scripts provide a simple tools to convert Brat Standoff format to BIO format. what’s different: support multiple span of text from a single entity...
         </description>
         <pubDate>Sat, 11 Mar 2023 00:00:00 -0500</pubDate>
         <link>http://localhost:4003/2023-03-11-Brat2BIO/</link>
@@ -34,7 +34,7 @@
       </item>
     
       <item>
-        <title>Linux command cheat sheet(Basic)</title>
+        <title>Linux command cheat sheet (Basic)</title>
         <description>
           
           This note mostly adatped from linuxgems Bash Script Template General Command Basic File and Directory Operations File System Administration files operation Processes Compression and Encryption Bash Script Template #!/usr/bin/env bash [your command here] General Command # view thet manual for a command man [command] || [command] -h # guess the...
