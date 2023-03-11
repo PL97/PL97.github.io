@@ -1,0 +1,9 @@
+[submodule "NBFF"]
+	path = NBFF
+	url = https://github.com/PL97/NBFF.git
+[submodule "test"]
+	path = test
+	url = https://github.com/PL97/NBFF
+[submodule "_posts"]
+	path = _posts
+	url = https://github.com/PL97/NBFF
