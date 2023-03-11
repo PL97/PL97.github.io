@@ -23,6 +23,17 @@
       </item>
     
       <item>
+        <title>Brat2BIO, A simple script that convert Brat format to BIO format</title>
+        <description>
+          
+          Brat2BIO A simple script that convert Brat format to BIO format Conversion code adapted from GithubGist by thatguysimon What this git repo for? This scripts provide a simple tools to convert Brat Standoff format to BIO format. what’s different: support multiple span of text from a single entity save to...
+        </description>
+        <pubDate>Sat, 11 Mar 2023 00:00:00 -0500</pubDate>
+        <link>http://localhost:4003/2023-03-11-Brat2BIO/</link>
+        <guid isPermaLink="true">http://localhost:4003/2023-03-11-Brat2BIO/</guid>
+      </item>
+    
+      <item>
         <title>Explicit and Implicit Knowledge Distillation via Unlabeled Data</title>
         <description>
           
