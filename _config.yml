@@ -24,7 +24,7 @@ navbar-links:
   Service: "pages/services"
   Notes:
     - Posts: "pages/blog"
-    - Tags: "pages/tags"
+    - Tags: "tags"
   About Me: "index"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
