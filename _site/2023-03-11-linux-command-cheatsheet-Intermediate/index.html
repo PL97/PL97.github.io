@@ -9,13 +9,13 @@
 
   
 
-  <title>Explicit and Implicit Knowledge Distillation via Unlabeled Data</title>
+  <title>Bash command cheat sheet (Intermediate)</title>
 
   
   <meta name="author" content="Le Peng">
   
 
-  <meta name="description" content=":fire: Explicit and Implicit Knowledge Distillation via Unlabeled Data :fire: Date: 2023-02-20 :link: #tag/computer_vision #tag/knowledge-distillation Key idea this paper proposed a knowledge distillation method that consider prediction entropy as a method for selecting subsitute dataset from wild (a vein of knowledge distillation method that make use of unlabeld public dataset)....">
+  <meta name="description" content="This note mostly adatped from linuxgems Bash Script Template User and Groups Logical Operator Pip \&amp;amp; redirect Arguments Bash Script Template #!/usr/bin/env bash [your command here] User and Groups # change owner of a file or dir chown [owner] [file] # change pprivileges chmod [-r] [+/-rwn] [dir] # create a...">
 
   
 
@@ -76,19 +76,19 @@
 
   
   <meta property="og:site_name" content="Le Peng">
-  <meta property="og:title" content="Explicit and Implicit Knowledge Distillation via Unlabeled Data">
-  <meta property="og:description" content=":fire: Explicit and Implicit Knowledge Distillation via Unlabeled Data :fire: Date: 2023-02-20 :link: #tag/computer_vision #tag/knowledge-distillation Key idea this paper proposed a knowledge distillation method that consider prediction entropy as a method for selecting subsitute dataset from wild (a vein of knowledge distillation method that make use of unlabeld public dataset)....">
+  <meta property="og:title" content="Bash command cheat sheet (Intermediate)">
+  <meta property="og:description" content="This note mostly adatped from linuxgems Bash Script Template User and Groups Logical Operator Pip \&amp;amp; redirect Arguments Bash Script Template #!/usr/bin/env bash [your command here] User and Groups # change owner of a file or dir chown [owner] [file] # change pprivileges chmod [-r] [+/-rwn] [dir] # create a...">
 
   
-  <meta property="og:image" content="http://localhost:4003/assets/img/path.jpg">
+  <meta property="og:image" content="http://localhost:4003/assets/img/linux.jpg">
   
 
   
   <meta property="og:type" content="article">
   <meta property="og:article:author" content="Le Peng">
-  <meta property="og:article:published_time" content="2023-02-20T00:00:00-05:00">
-  <meta property="og:url" content="http://localhost:4003/2023-02-20-knowledge-distillation/">
-  <link rel="canonical" href="http://localhost:4003/2023-02-20-knowledge-distillation/">
+  <meta property="og:article:published_time" content="2023-03-11T00:00:00-05:00">
+  <meta property="og:url" content="http://localhost:4003/2023-03-11-linux-command-cheatsheet-Intermediate/">
+  <link rel="canonical" href="http://localhost:4003/2023-03-11-linux-command-cheatsheet-Intermediate/">
   
 
   
@@ -97,11 +97,11 @@
   <meta name="twitter:site" content="@LePeng57300967">
   <meta name="twitter:creator" content="@LePeng57300967">
 
-  <meta property="twitter:title" content="Explicit and Implicit Knowledge Distillation via Unlabeled Data">
-  <meta property="twitter:description" content=":fire: Explicit and Implicit Knowledge Distillation via Unlabeled Data :fire: Date: 2023-02-20 :link: #tag/computer_vision #tag/knowledge-distillation Key idea this paper proposed a knowledge distillation method that consider prediction entropy as a method for selecting subsitute dataset from wild (a vein of knowledge distillation method that make use of unlabeld public dataset)....">
+  <meta property="twitter:title" content="Bash command cheat sheet (Intermediate)">
+  <meta property="twitter:description" content="This note mostly adatped from linuxgems Bash Script Template User and Groups Logical Operator Pip \&amp;amp; redirect Arguments Bash Script Template #!/usr/bin/env bash [your command here] User and Groups # change owner of a file or dir chown [owner] [file] # change pprivileges chmod [-r] [+/-rwn] [dir] # create a...">
 
   
-  <meta name="twitter:image" content="http://localhost:4003/assets/img/path.jpg">
+  <meta name="twitter:image" content="http://localhost:4003/assets/img/linux.jpg">
   
 
   
@@ -166,7 +166,7 @@
     
     
       
-      data-img-src-1="http://localhost:4003/assets/img/path.jpg"
+      data-img-src-1="http://localhost:4003/assets/img/linux.jpg"
     
     
     
@@ -180,11 +180,11 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>Explicit and Implicit Knowledge Distillation via Unlabeled Data</h1>
+          <h1>Bash command cheat sheet (Intermediate)</h1>
           
 
           
-            <span class="post-meta">Posted on February 20, 2023</span>
+            <span class="post-meta">Posted on March 11, 2023</span>
             
             
               <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
@@ -212,11 +212,11 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>Explicit and Implicit Knowledge Distillation via Unlabeled Data</h1>
+          <h1>Bash command cheat sheet (Intermediate)</h1>
           
 
           
-            <span class="post-meta">Posted on February 20, 2023</span>
+            <span class="post-meta">Posted on March 11, 2023</span>
             
             
               <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
@@ -252,53 +252,116 @@
       
 
       <article role="main" class="blog-post">
-        <h2 id="fire-explicit-and-implicit-knowledge-distillation-via-unlabeled-data-fire">:fire: Explicit and Implicit Knowledge Distillation via Unlabeled Data :fire:</h2>
-<p><strong>Date: 2023-02-20</strong> <a href="https://arxiv.org/abs/2302.08771">:link:</a> #tag/computer_vision #tag/knowledge-distillation</p>
-<h3 id="key-idea">Key idea</h3>
-<p>this paper proposed a knowledge distillation method that consider prediction entropy as a method for selecting subsitute dataset from wild (a vein of knowledge distillation method that make use of unlabeld public dataset). Major components compose of: 1) a adaptive threshold selection. Use entropy as a way to select samples from a dataset. 2) class-dropping noise suppresion. Use confidence to generate pseudo labels (multi-label). 3) feature distillation component. pick two layers in NN, one from the firt BN layer which represent low level features (claimed to boost the convergence speed), the other from the last layer before final linear layer which is used to mimic the output of the teacher model. 4) last is structure differentiation relationships which constrain the difference of the output logits of teacher and student should be close.</p>
-
-<p>:thumbsup: The design of multiple component to suppress either the label noise or imitate the structured differentiation is interesting.</p>
-
-<p>:thumbsdown: There are no much novelty here. More or less like putting pices together to get a dish.</p>
-
-<h3 id="takeway">Takeway</h3>
-
-<h3 id="idea">Idea</h3>
+        <p><em>This note mostly adatped from <a href="https://github.com/kevinthew/linuxgems">linuxgems</a></em></p>
 
 <ul>
-  <li>feature distillation part is too loose. Is there any better way to improve the convergence?</li>
-  <li>the final loss term is too many. Which is the most foundimental component lead to such performance boost.</li>
-  <li>what if the origional model is not robust, can student model inherite them?</li>
+  <li><a href="#bash-script-template">Bash Script Template</a></li>
+  <li><a href="#user-and-groups">User and Groups</a></li>
+  <li><a href="#logical-operator">Logical Operator</a></li>
+  <li><a href="#pip--redirect">Pip \&amp; redirect</a></li>
+  <li><a href="#arguments">Arguments</a></li>
 </ul>
 
-<hr />
-<hr />
+<h3 id="bash-script-template">Bash Script Template</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
 
-<h2 id="fire-tamuna-accelerated-federated-learning-with-local-training-and-partial-participation-fire">:fire: TAMUNA: Accelerated Federated Learning with Local Training and Partial Participation :fire:</h2>
-<p><strong>Date: 2023-02-20</strong> <a href="https://arxiv.org/abs/2302.09832">:link:</a> #tag/federated_learning</p>
-<h3 id="key-idea-1">Key idea</h3>
-<p>This paper proposed a novel federated learning algorithm to reduce communication complexity. The method is a “PP” version of Scaffnew.
-<img src="20230220232301.png" alt="" /><br />
-:thumbsup: A compreshnsive review of past work and convey the idea very clearly.</p>
+<span class="o">[</span>your <span class="nb">command </span>here]
+</code></pre></div></div>
 
-<p>:thumbsdown: Simulate on a sythetic dataset. Experiment is too thin.</p>
+<h3 id="user-and-groups">User and Groups</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># change owner of a file or dir</span>
+<span class="nb">chown</span> <span class="o">[</span>owner] <span class="o">[</span>file]
 
-<h3 id="takeway-1">Takeway</h3>
-<ul>
-  <li>several FL algorithms
-    <ul>
-      <li><strong>scallfold</strong> is proposed to correct fedavg under no-iid setting with linear converge speed, similar in <strong>S-Local-GD</strong> and <strong>FedLin</strong>. However, their communication complexity is $O(klog\epsilon^{-1})$</li>
-      <li><strong>Scaffnew</strong> is proposed to improve the communication efficiency with improved complexity of $O(\sqrt{k}log\epsilon^{-1})$. Similarly for <strong>APDA-Inexact</strong> and <strong>5GCS</strong></li>
-    </ul>
-  </li>
-</ul>
+<span class="c"># change pprivileges</span>
+<span class="nb">chmod</span> <span class="o">[</span><span class="nt">-r</span><span class="o">]</span> <span class="o">[</span>+/-rwn] <span class="o">[</span><span class="nb">dir</span><span class="o">]</span>
 
-<h3 id="idea-1">Idea</h3>
-<ul>
-  <li>probabaly better to refer to Scaffnew paper to get more idea…</li>
-</ul>
+<span class="c"># create a new user</span>
+adduser <span class="o">[</span>user]
 
-<hr />
+<span class="c"># list all user</span>
+<span class="nb">cat</span> /etc/passwd
+
+<span class="c"># delete user</span>
+deluser <span class="o">[</span>user]
+
+<span class="c"># print groups</span>
+<span class="nb">groups</span>
+
+<span class="c"># create a new group</span>
+groupadd
+
+<span class="c"># change group privileges</span>
+groupmod
+
+<span class="c"># delete group</span>
+delgroup
+
+<span class="c"># change password</span>
+passwd
+
+<span class="c"># write one line to another user from your terminal:</span>
+talk
+
+<span class="c"># interactive talk program to talk to other users from terminal:</span>
+ytalk
+</code></pre></div></div>
+
+<h3 id="logical-operator">Logical Operator</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># and, execture all otherwise none</span>
+<span class="o">[</span>command1] <span class="o">&amp;&amp;</span> <span class="o">[</span>command2]
+
+<span class="c"># or, execute any if possible</span>
+<span class="o">[</span>command1] <span class="o">||</span> <span class="o">[</span>command2]
+
+<span class="c"># condition</span>
+<span class="k">if</span> <span class="o">[</span> condition <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="o">[</span>command1]<span class="p">;</span> <span class="k">else</span> <span class="o">[</span>command2]<span class="p">;</span> <span class="k">fi</span>
+</code></pre></div></div>
+
+<h3 id="pip--redirect">Pip &amp; redirect</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># make a pip </span>
+<span class="o">[</span>command1] | <span class="o">[</span>command2] | <span class="o">[</span>command3]
+
+<span class="c"># sort files based on the name, and display it using less</span>
+<span class="nb">ls</span> | <span class="nb">grep</span> <span class="k">*</span>.sh | less
+
+<span class="c"># redirect stdout to file (overwrite), reverse "&lt;"</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="o">&gt;</span> <span class="o">[</span>file]
+
+<span class="c"># same as above</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> 1&gt;[file]
+
+
+<span class="c"># redirect stderr to file</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> 2&gt;[file]
+
+<span class="c"># redicect stderr and stdout to file</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> &amp;&gt;name
+
+<span class="c"># redirect stdout to file (append), reverse "&lt;&lt;"</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="o">&gt;&gt;</span> <span class="o">[</span>file]
+
+<span class="c"># discard output</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="o">&gt;</span> /dev/null
+
+<span class="c"># discard error message, same as 2&gt;&amp;0</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> 2&gt;/dev/null
+
+<span class="c"># discard output and error message</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="o">&gt;</span> /dev/null 2&gt;/dev/null
+
+<span class="c"># same as above, different from &amp;&gt;, &amp;1 indicate stdout</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="o">&gt;</span> dev/null 2&gt;&amp;1
+</code></pre></div></div>
+
+<h3 id="arguments">Arguments</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># use arg when execute bash script</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="s2">"</span><span class="k">${</span><span class="nv">arg1</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="c"># same as above</span>
+<span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="nv">$1</span>
+</code></pre></div></div>
 
       </article>
 
@@ -306,9 +369,9 @@
         <div class="blog-tags">
           <span>Tags:</span>
           
-            <a href="/tags#paper reading">paper reading</a>
+            <a href="/tags#linux">linux</a>
           
-            <a href="/tags#knowledge distillation">knowledge distillation</a>
+            <a href="/tags#cheatsheet">cheatsheet</a>
           
         </div>
       
@@ -326,13 +389,9 @@
 
       <ul class="pagination blog-pager">
         
-        <li class="page-item previous">
-          <a class="page-link" href="/2023-02-19-self.distillation/" data-toggle="tooltip" data-placement="top" title="Robust Representation Learning with Self-Distillation for Domain Generalization">&larr; Previous Post</a>
-        </li>
-        
         
         <li class="page-item next">
-          <a class="page-link" href="/2023-03-11-linux-command-cheatsheet/" data-toggle="tooltip" data-placement="top" title="Linux command cheat sheet (Basic)">Next Post &rarr;</a>
+          <a class="page-link" href="/2023-03-11-linux-command-cheatsheet-basic/" data-toggle="tooltip" data-placement="top" title="linux command cheat sheet (Basic)">Next Post &rarr;</a>
         </li>
         
       </ul>
