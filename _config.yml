@@ -22,7 +22,7 @@ author: Le Peng
 navbar-links:
   Publications : "pages/publication"
   Service: "pages/services"
-  Notes:
+  Blogs:
     - Posts: "pages/blog"
     - Tags: "tags"
   About Me: "index"
