@@ -9,13 +9,13 @@
 
   
 
-  <title>NER_metric, a light-weight evaluation tool for NER</title>
+  <title>A effecient tool for extract dicom meta data from files</title>
 
   
   <meta name="author" content="Le Peng">
   
 
-  <meta name="description" content="Source: GitHub NER_eval A simple implementation of strict/lenient matching to evaluate NER performance (precision, recall, F1-score) in 60 lines! This script currently only supports the IOB2 format with both strict and lenient modes. Installation pip install ner_metrics Usage from ner_metrics import classication_report y_true = ['B-PER', 'I-PER', 'O', 'B-ORG', 'B-ORG', 'O',...">
+  <meta name="description" content="DCM-Parser A effecient tool for extract dicom meta data from files. This tool offers: convert dicom to png (if pixel array is 2D) / mp4 (3D) extract all meta data (dicom header) to a single csv file examize corrupted files and files with missing values multi-thread speed up exact HUNDREDS...">
 
   
 
@@ -76,8 +76,8 @@
 
   
   <meta property="og:site_name" content="Le Peng">
-  <meta property="og:title" content="NER_metric, a light-weight evaluation tool for NER">
-  <meta property="og:description" content="Source: GitHub NER_eval A simple implementation of strict/lenient matching to evaluate NER performance (precision, recall, F1-score) in 60 lines! This script currently only supports the IOB2 format with both strict and lenient modes. Installation pip install ner_metrics Usage from ner_metrics import classication_report y_true = ['B-PER', 'I-PER', 'O', 'B-ORG', 'B-ORG', 'O',...">
+  <meta property="og:title" content="A effecient tool for extract dicom meta data from files">
+  <meta property="og:description" content="DCM-Parser A effecient tool for extract dicom meta data from files. This tool offers: convert dicom to png (if pixel array is 2D) / mp4 (3D) extract all meta data (dicom header) to a single csv file examize corrupted files and files with missing values multi-thread speed up exact HUNDREDS...">
 
   
   <meta property="og:image" content="http://localhost:4003/assets/img/path.jpg">
@@ -87,8 +87,8 @@
   <meta property="og:type" content="article">
   <meta property="og:article:author" content="Le Peng">
   <meta property="og:article:published_time" content="2023-03-11T00:00:00-05:00">
-  <meta property="og:url" content="http://localhost:4003/2023-03-11-ner-metrics/">
-  <link rel="canonical" href="http://localhost:4003/2023-03-11-ner-metrics/">
+  <meta property="og:url" content="http://localhost:4003/2023-03-11-dcm-parser/">
+  <link rel="canonical" href="http://localhost:4003/2023-03-11-dcm-parser/">
   
 
   
@@ -97,8 +97,8 @@
   <meta name="twitter:site" content="@LePeng57300967">
   <meta name="twitter:creator" content="@LePeng57300967">
 
-  <meta property="twitter:title" content="NER_metric, a light-weight evaluation tool for NER">
-  <meta property="twitter:description" content="Source: GitHub NER_eval A simple implementation of strict/lenient matching to evaluate NER performance (precision, recall, F1-score) in 60 lines! This script currently only supports the IOB2 format with both strict and lenient modes. Installation pip install ner_metrics Usage from ner_metrics import classication_report y_true = ['B-PER', 'I-PER', 'O', 'B-ORG', 'B-ORG', 'O',...">
+  <meta property="twitter:title" content="A effecient tool for extract dicom meta data from files">
+  <meta property="twitter:description" content="DCM-Parser A effecient tool for extract dicom meta data from files. This tool offers: convert dicom to png (if pixel array is 2D) / mp4 (3D) extract all meta data (dicom header) to a single csv file examize corrupted files and files with missing values multi-thread speed up exact HUNDREDS...">
 
   
   <meta name="twitter:image" content="http://localhost:4003/assets/img/path.jpg">
@@ -180,7 +180,7 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>NER_metric, a light-weight evaluation tool for NER</h1>
+          <h1>A effecient tool for extract dicom meta data from files</h1>
           
 
           
@@ -212,7 +212,7 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>NER_metric, a light-weight evaluation tool for NER</h1>
+          <h1>A effecient tool for extract dicom meta data from files</h1>
           
 
           
@@ -252,46 +252,46 @@
       
 
       <article role="main" class="blog-post">
-        <p>Source: <a href="https://github.com/PL97/NER_eval">GitHub</a></p>
+        <p><img src="https://img.shields.io/github/license/PL97/DICOM_Parser" alt="GitHub Liscence" />
+<img src="https://img.shields.io/pypi/dm/DCM-parser" alt="PyPi Download" />
+<img src="https://img.shields.io/pypi/v/DCM-parser" alt="Pypi version" /></p>
 
-<h2 id="ner_eval">NER_eval</h2>
-<p>A simple implementation of strict/lenient matching to evaluate NER performance (precision, recall, F1-score) in 60 lines!</p>
+<h2 id="dcm-parser">DCM-Parser</h2>
+<p>A effecient tool for extract dicom meta data from files.</p>
 
-<p>This script currently only supports the IOB2 format with both strict and lenient modes.</p>
+<p>This tool offers:</p>
+<ul>
+  <li>convert dicom to png (if pixel array is 2D) / mp4 (3D)</li>
+  <li>extract all meta data (dicom header) to a single csv file</li>
+  <li>examize corrupted files and files with missing values</li>
+  <li>multi-thread speed up exact HUNDREDS files in seconds</li>
+</ul>
 
 <h2 id="installation">Installation</h2>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>ner_metrics
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+pip <span class="nb">install </span>dcm-parser
 </code></pre></div></div>
 
 <h2 id="usage">Usage</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">ner_metrics</span> <span class="kn">import</span> <span class="n">classication_report</span>
+<p><strong>ONE line for everything!</strong></p>
 
-<span class="n">y_true</span> <span class="o">=</span> <span class="p">[</span><span class="s">'B-PER'</span><span class="p">,</span> <span class="s">'I-PER'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">,</span> <span class="s">'B-ORG'</span><span class="p">,</span> <span class="s">'B-ORG'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">,</span> <span class="s">'B-PER'</span><span class="p">,</span> <span class="s">'I-PER'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">]</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="p">[</span><span class="s">'O'</span><span class="p">,</span> <span class="s">'B-PER'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">,</span> <span class="s">'B-ORG'</span><span class="p">,</span> <span class="s">'B-ORG'</span><span class="p">,</span> <span class="s">'I-ORG'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">,</span> <span class="s">'B-PER'</span><span class="p">,</span> <span class="s">'I-PER'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">]</span>
-<span class="n">classifcation_report</span><span class="p">(</span><span class="n">tags_true</span><span class="o">=</span><span class="n">y_true</span><span class="p">,</span> <span class="n">tags_pred</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">"lenient"</span><span class="p">)</span> <span class="c1"># for lenient match
-</span>
-<span class="n">classifcation_report</span><span class="p">(</span><span class="n">tags_true</span><span class="o">=</span><span class="n">y_true</span><span class="p">,</span> <span class="n">tags_pred</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">"strict"</span><span class="p">)</span> <span class="c1"># for strict match
-</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">dcm_parser</span> <span class="kn">import</span> <span class="n">batch_extraction</span>
+
+<span class="n">batch_extraction</span><span class="p">(</span><span class="n">source_dir</span><span class="o">=</span><span class="p">[</span><span class="n">YOUR_SOURCE_DIR</span><span class="p">],</span> <span class="n">dest_dir</span><span class="o">=</span><span class="p">[</span><span class="n">YOUR_TARGET_DIR</span><span class="p">],</span> <span class="n">save_img</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
 </code></pre></div></div>
-<p>Expected output</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag(lenient): PER        precision:1.0   recall:1.0      f1-score:1.0
-tag(strict): PER         precision:0.5   recall:0.5      f1-score:0.5
-tag(lenient): ORG        precision:1.0   recall:1.0      f1-score:1.0
-tag(strict): ORG         precision:0.5   recall:0.5      f1-score:0.5
-</code></pre></div></div>
-<p>The results are also saved to <em>evaluation.json</em></p>
 
 <h2 id="how-to-cite-this-work">How to cite this work</h2>
 
-<p>If you find this git repo useful, please consider citing it using the snippet below:</p>
-<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@misc</span><span class="p">{</span><span class="nl">ner_eval</span><span class="p">,</span>
-    <span class="na">author</span><span class="p">=</span><span class="s">{Le Peng}</span><span class="p">,</span>
-    <span class="na">title</span><span class="p">=</span><span class="s">{ner_metrics: A Simple Python Snippets for NER Evaluation}</span><span class="p">,</span>
-    <span class="na">howpublished</span><span class="p">=</span><span class="s">{\url{https://github.com/PL97/NER_eval}}</span><span class="p">,</span>
-    <span class="na">year</span><span class="p">=</span><span class="s">{2022}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p>If you find this git repo useful, please consider citing it using the snippet below:
+```bibtex
+@misc{DCM-parser,
+    author={Le Peng},
+    title={DCM-parser: A Lightning DICOM Parser},
+    howpublished={\url{https://github.com/PL97/DICOM_Parser}},
+    year={2022}
+}</p>
 
       </article>
 
@@ -299,7 +299,7 @@ tag(strict): ORG         precision:0.5   recall:0.5      f1-score:0.5
         <div class="blog-tags">
           <span>Tags:</span>
           
-            <a href="/tags#nlp">nlp</a>
+            <a href="/tags#DICOM">DICOM</a>
           
             <a href="/tags#tools">tools</a>
           
@@ -320,13 +320,9 @@ tag(strict): ORG         precision:0.5   recall:0.5      f1-score:0.5
       <ul class="pagination blog-pager">
         
         <li class="page-item previous">
-          <a class="page-link" href="/2023-03-11-Brat2BIO/" data-toggle="tooltip" data-placement="top" title="Brat2BIO, A simple script that convert Brat format to BIO format">&larr; Previous Post</a>
+          <a class="page-link" href="/2023-03-11-ner-metrics/" data-toggle="tooltip" data-placement="top" title="NER_metric, a light-weight evaluation tool for NER">&larr; Previous Post</a>
         </li>
         
-        
-        <li class="page-item next">
-          <a class="page-link" href="/2023-03-11-dcm-parser/" data-toggle="tooltip" data-placement="top" title="A effecient tool for extract dicom meta data from files">Next Post &rarr;</a>
-        </li>
         
       </ul>
       
