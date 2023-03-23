@@ -12,10 +12,21 @@
     
     
       <item>
-        <title>A effecient tool for extract dicom meta data from files</title>
+        <title>linux GUN screen command cheat sheet</title>
         <description>
           
-          DCM-Parser A effecient tool for extract dicom meta data from files. This tool offers: convert dicom to png (if pixel array is 2D) / mp4 (3D) extract all meta data (dicom header) to a single csv file examize corrupted files and files with missing values multi-thread speed up exact HUNDREDS...
+          credit to this great blog GUN screen # to start a new screen session screen # start a new screen session with specified name screen -S [session name] # display active screen sessions screen -ls # resume a detached screen screen -r/-x [session id] Basic command with screen # display...
+        </description>
+        <pubDate>Thu, 23 Mar 2023 00:00:00 -0400</pubDate>
+        <link>http://localhost:4003/2023-03-23-linux-GUN-screen/</link>
+        <guid isPermaLink="true">http://localhost:4003/2023-03-23-linux-GUN-screen/</guid>
+      </item>
+    
+      <item>
+        <title>DCM-Parser: A effecient tool to extract dicom meta data from files</title>
+        <description>
+          
+          Source: GitHub DCM-Parser A effecient tool for extract dicom meta data from files. This tool offers: convert dicom to png (if pixel array is 2D) / mp4 (3D) extract all meta data (dicom header) to a single csv file examize corrupted files and files with missing values multi-thread speed up...
         </description>
         <pubDate>Sat, 11 Mar 2023 00:00:00 -0500</pubDate>
         <link>http://localhost:4003/2023-03-11-dcm-parser/</link>
