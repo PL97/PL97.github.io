@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Git command cheat sheet</title>
+
+  
+  <meta name="author" content="Le Peng">
+  
+
+  <meta name="description" content="credit: reference website Config your git with github Local operations Basic local life cycle Tracking changes undoing changes Clean up files Branch management Remote operations Create shortcut Config your git with github ## config your email git config user.email [email] ## config your username git config user.name [username] ## set...">
+
+  
+
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Le Peng" href="http://localhost:4003/feed.xml">
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Le Peng">
+  <meta property="og:title" content="Git command cheat sheet">
+  <meta property="og:description" content="credit: reference website Config your git with github Local operations Basic local life cycle Tracking changes undoing changes Clean up files Branch management Remote operations Create shortcut Config your git with github ## config your email git config user.email [email] ## config your username git config user.name [username] ## set...">
+
+  
+  <meta property="og:image" content="http://localhost:4003/assets/img/git_header.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Le Peng">
+  <meta property="og:article:published_time" content="2023-03-28T00:00:00-04:00">
+  <meta property="og:url" content="http://localhost:4003/2023-03-28-git-cheatsheet/">
+  <link rel="canonical" href="http://localhost:4003/2023-03-28-git-cheatsheet/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@LePeng57300967">
+  <meta name="twitter:creator" content="@LePeng57300967">
+
+  <meta property="twitter:title" content="Git command cheat sheet">
+  <meta property="twitter:description" content="credit: reference website Config your git with github Local operations Basic local life cycle Tracking changes undoing changes Clean up files Branch management Remote operations Create shortcut Config your git with github ## config your email git config user.email [email] ## config your username git config user.name [username] ## set...">
+
+  
+  <meta name="twitter:image" content="http://localhost:4003/assets/img/git_header.png">
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4003/">Le Peng</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/publication">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/services">Service</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/pages/blog">Posts</a>
+                  <a class="dropdown-item" href="/tags">Tags</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/index">About Me</a>
+          </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="http://localhost:4003/assets/img/git_header.png"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Git command cheat sheet</h1>
+          
+
+          
+            <span class="post-meta">Posted on March 28, 2023</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 3 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Git command cheat sheet</h1>
+          
+
+          
+            <span class="post-meta">Posted on March 28, 2023</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 3 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <p>credit: <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">reference website</a></p>
+
+<p><img src="../../assets/img/git.png" alt="git development workflow" height="700" /></p>
+
+<ul>
+  <li><a href="#config-your-git-with-github">Config your git with github</a></li>
+  <li><a href="#local-operations">Local operations</a>
+    <ul>
+      <li><a href="#basic-local-life-cycle">Basic local life cycle</a></li>
+      <li><a href="#tracking-changes">Tracking changes</a></li>
+      <li><a href="#undoing-changes">undoing changes</a></li>
+      <li><a href="#clean-up-files">Clean up files</a></li>
+    </ul>
+  </li>
+  <li><a href="#branch-management">Branch management</a></li>
+  <li><a href="#remote-operations">Remote operations</a></li>
+  <li><a href="#create-shortcut">Create shortcut</a></li>
+</ul>
+
+<h2 id="config-your-git-with-github">Config your git with github</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## config your email</span>
+git config user.email <span class="o">[</span>email]
+
+<span class="c">## config your username</span>
+git config user.name <span class="o">[</span>username]
+
+<span class="c">## set global username (email)</span>
+git config user.name <span class="nt">--global</span> <span class="o">[</span>username]
+
+<span class="c">## set global username and email by edit ~/.gitconfig</span>
+vim ~/.gitconfig
+<span class="o">[</span>user]
+    <span class="nv">email</span><span class="o">=[</span>email address]
+    name <span class="o">=</span> <span class="o">[</span>username]
+
+<span class="c">## work with github personal access token</span>
+vim ~/.netrc
+<span class="c">## past this line (change username and personal access token accordingly)</span>
+machine github.com login <span class="o">[</span>username] password <span class="o">[</span>personal access token]
+</code></pre></div></div>
+
+<h2 id="local-operations">Local operations</h2>
+
+<h3 id="basic-local-life-cycle">Basic local life cycle</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## initialize local git repo</span>
+git init
+
+
+<span class="c">## save changes (file, dir, or file match the reg expression) and add them to staging area </span>
+git add <span class="o">[</span>file/dir/reg exp]
+
+<span class="c">## save all changes under current dir</span>
+git add <span class="k">*</span>
+
+<span class="c">## save</span>
+git add <span class="nt">-p</span>
+
+<span class="c">## commit changes to local repo (commit all)</span>
+git commit <span class="nt">-a</span> <span class="nt">-m</span> <span class="s2">"SOME COMMENTS"</span>
+
+</code></pre></div></div>
+
+<h3 id="tracking-changes">Tracking changes</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## show changes that have been made since last commit</span>
+git diff
+
+<span class="c">## show changes that have been made (for better granularity)</span>
+git diff <span class="nt">--color-words</span>
+
+<span class="c">## show changes compare to one commit</span>
+git diff <span class="o">[</span>HEAD/commit <span class="nb">id</span><span class="o">]</span> <span class="o">[</span><span class="nb">dir</span>/file]
+
+<span class="c">## compare files from different branches</span>
+git diff <span class="o">[</span>branch1] <span class="o">[</span>branch2] <span class="o">[</span>file]
+
+<span class="c">## print all log information</span>
+git log <span class="o">[</span><span class="nt">--oneline</span> compact layout]
+
+<span class="c">## print logs with highlights</span>
+git log <span class="nt">--pretty</span>
+
+<span class="c">## show local repo status</span>
+git status
+
+<span class="c">## git add tag to a commit</span>
+git tag <span class="nt">-a</span> <span class="o">[</span>tagname]
+
+<span class="c">## trace back to the commit history and find who made the changes</span>
+git blame <span class="o">[</span><span class="nt">-e</span> show email] <span class="o">[</span><span class="nt">-w</span> ignore wihitespace changes] <span class="o">[</span>file]
+
+<span class="c">## show a complete operation logs</span>
+git reflog <span class="o">[</span><span class="nt">--relative-date</span> show related <span class="nb">date</span><span class="o">]</span>
+</code></pre></div></div>
+
+<h3 id="undoing-changes">undoing changes</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## create a new commit with the reverse of the last commit(not really undo the commit)</span>
+git revert HEAD
+
+<span class="c">## real undo the commit (recommand to use it locally, for remote use git revert)</span>
+git reset <span class="nt">--hard</span> <span class="o">[</span>commit <span class="nb">id</span><span class="o">]</span>
+
+<span class="c">## edit the last commit</span>
+git commit <span class="nt">--amend</span>
+
+<span class="c">## change multiple commits</span>
+git rebase <span class="o">[</span><span class="nt">-i</span> interactive mode]
+</code></pre></div></div>
+
+<h3 id="clean-up-files">Clean up files</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## show which file will be impacted</span>
+git clean <span class="nt">-n</span>
+
+<span class="c">## clean untracked files</span>
+git clean <span class="nt">-f</span> 
+
+<span class="c">## clean untracked file in a dir</span>
+git clean <span class="nt">-f</span> <span class="nt">-d</span> <span class="o">[</span>path]
+
+<span class="c">## clean untracked and ingnored files</span>
+git clearn <span class="nt">-x</span> <span class="nt">-f</span>
+
+<span class="c">## clean file in interactive mode</span>
+git clean <span class="nt">-d</span> <span class="nt">-i</span>
+
+<span class="c">## remove files (reverse of git add)</span>
+git <span class="nb">rm</span> <span class="o">[</span><span class="nt">-n</span> same as what is <span class="k">in </span>git clean]  <span class="o">[</span><span class="nt">--cached</span> remove staging index]
+
+<span class="c">## undo git rm</span>
+git reset HEAD
+
+<span class="c">## soft version of undo git rm</span>
+git checkout <span class="nb">.</span>
+</code></pre></div></div>
+
+<h2 id="branch-management">Branch management</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## show all branches of current connections (same as git branch --list)</span>
+git branch
+
+<span class="c">## show all remote branches</span>
+git branch <span class="nt">-r</span>
+
+<span class="c">## show all remote branches (same as git branch -r)</span>
+git branch <span class="nt">-a</span>
+
+<span class="c">## create a new branch</span>
+git branch <span class="o">[</span>new branch name]
+
+<span class="c">## remove a branch (locally)</span>
+git branch <span class="nt">-D</span> <span class="o">[</span>branch name]
+
+<span class="c">## rename the current branch</span>
+git branch <span class="nt">-m</span> <span class="o">[</span>branch]
+
+<span class="c">## create a new branch and swithch to the branch</span>
+git checkout <span class="nt">-b</span> <span class="o">[</span>branch name]
+
+<span class="c">## remove a branch (remotely)</span>
+git push origin :branch_name
+
+</code></pre></div></div>
+
+<h2 id="remote-operations">Remote operations</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## show remote connections</span>
+git remote <span class="o">[</span><span class="nt">-v</span> show url as well]
+
+<span class="c">## add remote connection</span>
+git remote add <span class="o">[</span>name] <span class="o">[</span>url]
+
+<span class="c">## remove remote connection</span>
+git remote <span class="nb">rm</span> <span class="o">[</span>name]
+
+<span class="c">## rename remote connection</span>
+git remote rename <span class="o">[</span>oldname] <span class="o">[</span>newname]
+
+<span class="c">## inspecting a remote connection</span>
+git remote show <span class="o">[</span>connection name]
+
+<span class="c">## push local updates to remote  (--forece option is required after git commit --amend)</span>
+git push <span class="o">[</span>remote name] <span class="o">[</span>branch name]
+
+<span class="c">## retrive updates from remote connection of all branches</span>
+git fetch <span class="o">[</span>remote name]
+
+<span class="c">## retrive updates from remote connection of certain branch</span>
+git fetch <span class="o">[</span>remote name] <span class="o">[</span>branch name]
+
+<span class="c">## retrive all updates from all connections and all branch</span>
+git fetch <span class="nt">--all</span>
+
+<span class="c">## merge updates from remote connection "origin/new_branch" to main</span>
+git fetch origin new_branch
+git checkout main
+git merge origin/new_branch
+
+<span class="c">## a simpler solution to fetch+merge</span>
+git pull <span class="o">[</span>remote name]
+
+<span class="c">## pull without create a new commit</span>
+git pull <span class="nt">--no-commit</span> <span class="o">[</span>remote name]
+
+<span class="c">## pull with rebase (cleaner and promote linear history)</span>
+git pull <span class="nt">--rebase</span> <span class="o">[</span>remote name]
+
+
+</code></pre></div></div>
+
+<h2 id="create-shortcut">Create shortcut</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c">## remove currently added files from staging area</span>
+git config <span class="nt">--global</span> alias.unstage <span class="s1">'reset HEAD --'</span>
+<span class="c">## use case: equvalent to git reset HEAD -- file</span>
+git unstage <span class="o">[</span>file]
+</code></pre></div></div>
+
+
+      </article>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#Git">Git</a>
+          
+            <a href="/tags#cheatsheet">cheatsheet</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2023-03-23-linux-GUN-screen/" data-toggle="tooltip" data-placement="top" title="linux GUN screen command cheat sheet">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+      
+  
+  
+  
+
+  
+
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="https://github.com/PL97" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://twitter.com/LePeng57300967" title="Twitter">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Twitter</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/le-peng-98668b204" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=K0BZOpsAAAAJ&hl=en" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Le Peng
+        &nbsp;&bull;&nbsp;
+      
+      2023
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4003/">lepeng.org</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+  
+    
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+
+
+  
+
+
+
+  
+    <script src="/assets/js/anchor-js-config.js"></script>
+  
+
+
+
+</body>
+</html>
