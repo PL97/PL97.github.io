@@ -1,9 +1,9 @@
 [submodule "NBFF"]
 	path = NBFF
-	url = git@github.com:NBFF.git
+	url = git@github.com:PL97/NBFF.git
 [submodule "test"]
 	path = test
-	url = git@github.com:PL97/NBFF
+	url = git@github.com:PL97/NBFF.git
 [submodule "_posts"]
 	path = _posts
-	url = git@github.com:PL97/NBFF
+	url = git@github.com:PL97/NBFF.git
