@@ -78,6 +78,17 @@
       </item>
     
       <item>
+        <title>Bash command cheat sheet (Advanced)</title>
+        <description>
+          
+          awk for text display seed to text replace awk for text display awk '{print}' text.txt ## print lines in text.txt file that matches the pattern awk '/pattern/ {print}' text.txt ## print ith and jth column in text.txt file awk '{print $1,$4}' text.txt ## print line number awk '{print NR}' text.txt...
+        </description>
+        <pubDate>Sat, 11 Mar 2023 00:00:00 -0500</pubDate>
+        <link>http://localhost:4003/2023-03-11-linux-command-cheatsheet-advanced/</link>
+        <guid isPermaLink="true">http://localhost:4003/2023-03-11-linux-command-cheatsheet-advanced/</guid>
+      </item>
+    
+      <item>
         <title>Bash command cheat sheet (Intermediate)</title>
         <description>
           

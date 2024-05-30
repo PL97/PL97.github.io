@@ -9,13 +9,13 @@
 
   
 
-  <title>linux GUN screen command cheat sheet</title>
+  <title>Bash command cheat sheet (Advanced)</title>
 
   
   <meta name="author" content="Le Peng">
   
 
-  <meta name="description" content="credit to this great blog GUN screen # to start a new screen session screen # start a new screen session with specified name screen -S [session name] # display active screen sessions screen -ls # resume a detached screen screen -r/-x [session id] Basic command with screen # display...">
+  <meta name="description" content="awk for text display seed to text replace awk for text display awk '{print}' text.txt ## print lines in text.txt file that matches the pattern awk '/pattern/ {print}' text.txt ## print ith and jth column in text.txt file awk '{print $1,$4}' text.txt ## print line number awk '{print NR}' text.txt...">
 
   
 
@@ -76,8 +76,8 @@
 
   
   <meta property="og:site_name" content="Le Peng">
-  <meta property="og:title" content="linux GUN screen command cheat sheet">
-  <meta property="og:description" content="credit to this great blog GUN screen # to start a new screen session screen # start a new screen session with specified name screen -S [session name] # display active screen sessions screen -ls # resume a detached screen screen -r/-x [session id] Basic command with screen # display...">
+  <meta property="og:title" content="Bash command cheat sheet (Advanced)">
+  <meta property="og:description" content="awk for text display seed to text replace awk for text display awk '{print}' text.txt ## print lines in text.txt file that matches the pattern awk '/pattern/ {print}' text.txt ## print ith and jth column in text.txt file awk '{print $1,$4}' text.txt ## print line number awk '{print NR}' text.txt...">
 
   
   <meta property="og:image" content="http://localhost:4003/assets/img/linux.jpg">
@@ -86,9 +86,9 @@
   
   <meta property="og:type" content="article">
   <meta property="og:article:author" content="Le Peng">
-  <meta property="og:article:published_time" content="2023-03-23T00:00:00-04:00">
-  <meta property="og:url" content="http://localhost:4003/2023-03-23-linux-GUN-screen/">
-  <link rel="canonical" href="http://localhost:4003/2023-03-23-linux-GUN-screen/">
+  <meta property="og:article:published_time" content="2023-03-11T00:00:00-05:00">
+  <meta property="og:url" content="http://localhost:4003/2023-03-11-linux-command-cheatsheet-advanced/">
+  <link rel="canonical" href="http://localhost:4003/2023-03-11-linux-command-cheatsheet-advanced/">
   
 
   
@@ -97,8 +97,8 @@
   <meta name="twitter:site" content="@LePeng57300967">
   <meta name="twitter:creator" content="@LePeng57300967">
 
-  <meta property="twitter:title" content="linux GUN screen command cheat sheet">
-  <meta property="twitter:description" content="credit to this great blog GUN screen # to start a new screen session screen # start a new screen session with specified name screen -S [session name] # display active screen sessions screen -ls # resume a detached screen screen -r/-x [session id] Basic command with screen # display...">
+  <meta property="twitter:title" content="Bash command cheat sheet (Advanced)">
+  <meta property="twitter:description" content="awk for text display seed to text replace awk for text display awk '{print}' text.txt ## print lines in text.txt file that matches the pattern awk '/pattern/ {print}' text.txt ## print ith and jth column in text.txt file awk '{print $1,$4}' text.txt ## print line number awk '{print NR}' text.txt...">
 
   
   <meta name="twitter:image" content="http://localhost:4003/assets/img/linux.jpg">
@@ -180,11 +180,11 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>linux GUN screen command cheat sheet</h1>
+          <h1>Bash command cheat sheet (Advanced)</h1>
           
 
           
-            <span class="post-meta">Posted on March 23, 2023</span>
+            <span class="post-meta">Posted on March 11, 2023</span>
             
             
               <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
@@ -195,7 +195,7 @@
 
 
   
-  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 1 minute read</span>
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> &lt; 1 minute read</span>
 
 
             
@@ -212,11 +212,11 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>linux GUN screen command cheat sheet</h1>
+          <h1>Bash command cheat sheet (Advanced)</h1>
           
 
           
-            <span class="post-meta">Posted on March 23, 2023</span>
+            <span class="post-meta">Posted on March 11, 2023</span>
             
             
               <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
@@ -227,7 +227,7 @@
 
 
   
-  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 1 minute read</span>
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> &lt; 1 minute read</span>
 
 
             
@@ -252,103 +252,50 @@
       
 
       <article role="main" class="blog-post">
-        <p>credit to this great <a href="https://linuxize.com/post/how-to-use-linux-screen/">blog</a></p>
+        <ul>
+  <li><a href="#awk-for-text-display">awk for text display</a></li>
+  <li><a href="#seed-to-text-replace">seed to text replace</a></li>
+</ul>
 
-<h2 id="gun-screen">GUN screen</h2>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># to start a new screen session</span>
-screen
+<h3 id="awk-for-text-display">awk for text display</h3>
 
-<span class="c"># start a new screen session with specified name</span>
-screen <span class="nt">-S</span> <span class="o">[</span>session name]
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">awk</span> <span class="s1">'{print}'</span> text.txt
 
-<span class="c"># display active screen sessions</span>
-screen <span class="nt">-ls</span>
+<span class="c">## print lines in text.txt file that matches the pattern</span>
+<span class="nb">awk</span> <span class="s1">'/pattern/ {print}'</span> text.txt
 
-<span class="c"># resume a detached screen</span>
-screen <span class="nt">-r</span>/-x <span class="o">[</span>session <span class="nb">id</span><span class="o">]</span>
+<span class="c">## print ith and jth column in text.txt file</span>
+<span class="nb">awk</span> <span class="s1">'{print $1,$4}'</span> text.txt
 
+<span class="c">## print line number</span>
+<span class="nb">awk</span> <span class="s1">'{print NR}'</span> text.txt
 
+<span class="c">## print last column</span>
+<span class="nb">awk</span> <span class="s1">'{print $NF}'</span> text.txt
 
+<span class="c">## print line 2 to line 5</span>
+<span class="nb">awk</span> <span class="s1">'NR==2, NR==5 {print}'</span> text.txt 
+
+<span class="c">## change the default delimiter</span>
+<span class="nb">awk</span> <span class="nt">-F</span> <span class="s1">','</span> <span class="s1">'{print $NF}'</span> text.txt
+
+<span class="c">## similar to the above line using split function</span>
+<span class="nb">awk</span> <span class="s1">'{split($0, data, ","); print NR "-" data[5]}'</span> text.txt
 </code></pre></div></div>
 
-<p>Basic command with screen</p>
+<h3 id="seed-to-text-replace">seed to text replace</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## replace the first occurrence small to big in text.txt</span>
+<span class="nb">sed</span> <span class="s1">'s/small/big/'</span> text.txt
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># display avaliable command (can find reference for belows)</span>
-ctrl+a ?
+<span class="c">## similar to above</span>
+<span class="nb">sed</span> <span class="s1">'s/small/big/1'</span> text.txt
 
-<span class="c"># create a new window (with shell)</span>
-ctrl+a c
+<span class="c">## replace all the occurrence</span>
+<span class="nb">sed</span> <span class="s1">'s/small/big/g'</span> text.txt
 
-<span class="c"># list all windows</span>
-ctrl+a <span class="se">\"</span>
-
-<span class="c"># switch to window by number</span>
-ctrl+a <span class="o">[</span>number]
-
-<span class="c"># rename the crrent window</span>
-ctrl+a A
-
-<span class="c"># split the current region horizontally</span>
-ctrl+a S
-
-<span class="c"># split the current region vertically (combine with ctrl+a tab and ctrl+a c)</span>
-ctrl+a |
-
-<span class="c"># swith to the next region in the current window</span>
-ctrl+a tab
-
-<span class="c"># create a new window (with shell)</span>
-ctrl+a c
-
-<span class="c"># toggle between current and previous window</span>
-ctrl+a ctrl+a
-
-<span class="c"># close all regions but the current one</span>
-ctrl+a Q
-
-<span class="c"># close the current region</span>
-ctrl+a X
-
-<span class="c"># detach from linux screen session</span>
-ctrl+a ctrl+d
-
-<span class="c"># close screen session</span>
-ctrl+d
-
-<span class="c"># move to next screen window</span>
-ctrl+a n
-
-<span class="c"># move to previous screen window</span>
-ctrl+a n
-
-<span class="c"># freeze screen</span>
-ctrl+a ctrl+s
-
-<span class="c"># unfreeze screen</span>
-ctrl+a ctrl+q
+<span class="c">## replace all the occurrence (starting form the 3rd)</span>
+<span class="nb">sed</span> <span class="s1">'s/small/big/3g'</span> text.txt
 </code></pre></div></div>
-
-<p>:star: customize your screen session!</p>
-
-<p>edit ~/.screenrc</p>
-
-<p>A example:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Turn off the welcome message</span>
-startup_message off
-
-<span class="c"># Disable visual bell</span>
-vbell off
-
-<span class="c"># Set scrollback buffer to 10000</span>
-defscrollback 10000
-
-<span class="c"># Customize the status line</span>
-hardstatus alwayslastline
-hardstatus string <span class="s1">'%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'</span>
-
-</code></pre></div></div>
-
 
       </article>
 
@@ -377,12 +324,12 @@ hardstatus string <span class="s1">'%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}
       <ul class="pagination blog-pager">
         
         <li class="page-item previous">
-          <a class="page-link" href="/2023-03-11-dcm-parser/" data-toggle="tooltip" data-placement="top" title="DCM-Parser: A effecient tool to extract dicom meta data from files">&larr; Previous Post</a>
+          <a class="page-link" href="/2023-03-11-linux-command-cheatsheet-Intermediate/" data-toggle="tooltip" data-placement="top" title="Bash command cheat sheet (Intermediate)">&larr; Previous Post</a>
         </li>
         
         
         <li class="page-item next">
-          <a class="page-link" href="/2023-03-28-git-cheatsheet/" data-toggle="tooltip" data-placement="top" title="Git command cheat sheet">Next Post &rarr;</a>
+          <a class="page-link" href="/2023-03-11-linux-command-cheatsheet-basic/" data-toggle="tooltip" data-placement="top" title="linux command cheat sheet (Basic)">Next Post &rarr;</a>
         </li>
         
       </ul>
